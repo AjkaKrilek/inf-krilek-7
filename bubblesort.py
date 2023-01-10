@@ -1,16 +1,12 @@
 import random
-def zoznamik(zoznam):
-    a = len(zoznam)
-    b = len(zoznam)
-    while b>0:
-        for a in range(a-1):
-            if zoznam[c]>zoznam[c+1]:
-                zoznam[c], zoznam[c+1] = zoznam[c+1], zoznam[c]
-            elif zoznam[c]<zoznam[c+1] :
-                zoznam[c], zoznam[c+1] = zoznam[c], zoznam[c+1]
-        b=b-1
-    return zoznam
-zoznam=[]
-for i in range(10):
-    zoznam.append(random.randrange(0,100))
-print(zoznamik(zoznam))
+def bubblesort(zoz):
+    a = len(zoz)
+    for i in range(len(zoz)):
+        for n in range(len(zoz)-1):
+            if zoz[n]>zoz[n+1]:
+                zoz[n],zoz[n+1]=zoz[n+1],zoz[n]
+    return zoz
+zoz=[]
+for i in range(5):
+    zoz.append(random.randrange(0,20))
+print(bubblesort(zoz))
